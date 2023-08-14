@@ -1,0 +1,18 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix exNOC: <https://www.exNOC.com> .
+<exNOC:NOCDTAssetRegister> a dcat:Catalog ;
+foaf:homepage <https://catalogue-imfe.ceh.ac.uk/pimfe/NOC> ;
+dcat:themeTaxonomy  <nvs:NewCollectionRequiredForNOC> ;
+dct:title "The Asset Register for NOC DT"@en ;
+dct:description "This is the Asset Register for the Haig Fras DT ";
+dct:publisher 	<http://vocab.nerc.ac.uk/collection/B75/current/ORG00585/>;
+dcat:resource <exNOC:Standard1> ;
+dcat:resource <exNOC:Standard2> ;
+dcat:resource <exNOC:Software1> ;
+dcat:resource <exNOC:Software2> ;
+dcat:dataset <exNOC:Dataset1> ;
+dcat:dataset <exNOC:ModelData> ;
+dcat:service <exNOC:Service1> .
+
