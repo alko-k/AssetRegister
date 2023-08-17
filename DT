@@ -1,0 +1,27 @@
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dt: <http://example.com/digitaltwin/> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+
+dt:myDigitalTwin a ssn:System;
+rdfs:label "A Digtial Twin for the MPA Haig Fras"@en ;
+rdfs:comment "A Digtial Twin for the MPA Haig Fras"@en ;
+rdfs:seeAlso <HaigFrasDigitalTwin> ;
+ssn:implements <DHT22#Procedure> ;
+ssn:madeObservation dt:observation ;
+ssn:implements dt:software ;
+ssn:hasOutput dt:outputData ;
+ssn:hasSubSystem <https://radiantearth.github.io/stac-browser/#/external/pilot-imfe-o.s3-ext.jc.rl.ac.uk/haig-fras/STAC_Catalog/catalog.json> .
+
+<DHT22#Procedure> a ssn:Procedure;
+ssn:hasInput <https://catalogue.ceh.ac.uk/documents/GEBCOBathymetry.ttl> ;
+ssn:hasInput <https://catalogue.ceh.ac.uk/documents/EMODNetBathymetryData.ttl>.
+
+
+
+<https://catalogue.ceh.ac.uk/documents/GEBCOBathymetry.ttl> a ssn:Input, dcat:Dataset.
+<https://catalogue.ceh.ac.uk/documents/EMODNetBathymetryData.ttl> a ssn:Input, dcat:Dataset.
+<https://catalogue.ceh.ac.uk/documents/seaBedPhotos.ttl> a ssn:Input, dcat:Dataset.
+<https://catalogue.ceh.ac.uk/documents/processedMultiBeam.ttl> a ssn:Input, dcat:Dataset.
+
+<https://radiantearth.github.io/stac-browser/#/external/pilot-imfe-o.s3-ext.jc.rl.ac.uk/haig-fras/STAC_Catalog/catalog.json> a ssn:System, dcat:Service.
