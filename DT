@@ -8,15 +8,15 @@ rdfs:label "A Digtial Twin for the MPA Haig Fras"@en ;
 rdfs:comment "A Digtial Twin for the MPA Haig Fras"@en ;
 rdfs:seeAlso <HaigFrasDigitalTwin> ;
 ssn:implements <DHT22#Procedure> ;
-ssn:madeObservation dt:observation ;
-ssn:implements dt:software ;
-ssn:hasOutput dt:outputData ;
+ssn:madeObservation dt:Observation ;
+ssn:implements dt:Software ;
+ssn:hasOutput dt:OutputData ;
 ssn:hasSubSystem <https://radiantearth.github.io/stac-browser/#/external/pilot-imfe-o.s3-ext.jc.rl.ac.uk/haig-fras/STAC_Catalog/catalog.json> .
 
-<DHT22#Procedure> a ssn:Procedure;
+<DHT22#Procedure> a sosa:Procedure;
 ssn:hasInput <https://catalogue.ceh.ac.uk/documents/GEBCOBathymetry.ttl> ;
 ssn:hasInput <https://catalogue.ceh.ac.uk/documents/EMODNetBathymetryData.ttl>.
-
+ssn:hasOutput <>
 
 
 <https://catalogue.ceh.ac.uk/documents/GEBCOBathymetry.ttl> a ssn:Input, dcat:Dataset.
