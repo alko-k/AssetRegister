@@ -5,8 +5,8 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 dt:myDigitalTwin a ssn:System;
-rdfs:label "A Digtial Twin for the MPA Haig Fras"@en ;
-rdfs:comment "A Digtial Twin for the MPA Haig Fras"@en ;
+rdfs:label "A Digital Twin for the MPA Haig Fras"@en ;
+rdfs:comment "A Digital Twin for the MPA Haig Fras"@en ;
 rdfs:seeAlso <HaigFrasDigitalTwin> ;
 ssn:implements <DHT22#Procedure> ;
 ssn:madeObservation dt:Observation ;
