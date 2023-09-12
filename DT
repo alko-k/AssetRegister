@@ -2,6 +2,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dt: <http://example.com/digitaltwin/> .
 @prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 dt:myDigitalTwin a ssn:System;
 rdfs:label "A Digtial Twin for the MPA Haig Fras"@en ;
@@ -15,8 +16,8 @@ ssn:hasSubSystem <https://radiantearth.github.io/stac-browser/#/external/pilot-i
 
 <DHT22#Procedure> a sosa:Procedure;
 ssn:hasInput <https://catalogue.ceh.ac.uk/documents/GEBCOBathymetry.ttl> ;
-ssn:hasInput <https://catalogue.ceh.ac.uk/documents/EMODNetBathymetryData.ttl>.
-ssn:hasOutput <>
+ssn:hasInput <https://catalogue.ceh.ac.uk/documents/EMODNetBathymetryData.ttl>;
+ssn:hasOutput  dt:OutputData .
 
 
 <https://catalogue.ceh.ac.uk/documents/GEBCOBathymetry.ttl> a ssn:Input, dcat:Dataset.
