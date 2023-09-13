@@ -1,28 +1,38 @@
-@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dt: <http://example.com/digitaltwin/> .
 @prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix dcterms: <http://purl.org/dc/terms/Standard> .
 
+# Define the Digital Twin
 dt:myDigitalTwin a ssn:System;
+dcterms:conformsTo <netCDF>,<NVS>, <DCAT>, <ISO19139> ;
 rdfs:label "A Digital Twin for the MPA Haig Fras"@en ;
 rdfs:comment "A Digital Twin for the MPA Haig Fras"@en ;
 rdfs:seeAlso <HaigFrasDigitalTwin> ;
 ssn:implements <DHT22#Procedure> ;
 ssn:madeObservation dt:Observation ;
-ssn:implements dt:Software ;
+ssn:implements <https://radiantearth.github.io/stac-browser/#/external/pilot-imfe-o.s3-ext.jc.rl.ac.uk/haig-fras/STAC_Catalog/catalog.json> ;
 ssn:hasOutput dt:OutputData ;
 ssn:hasSubSystem <https://radiantearth.github.io/stac-browser/#/external/pilot-imfe-o.s3-ext.jc.rl.ac.uk/haig-fras/STAC_Catalog/catalog.json> .
 
+# Define the Procedure for DHT22
 <DHT22#Procedure> a sosa:Procedure;
 ssn:hasInput <https://catalogue.ceh.ac.uk/documents/GEBCOBathymetry.ttl> ;
 ssn:hasInput <https://catalogue.ceh.ac.uk/documents/EMODNetBathymetryData.ttl>;
 ssn:hasOutput  dt:OutputData .
 
+#Define the standards
+<netCDF> a dcterms:Standard .
+<DCAT>  a dcterms:Stanadard ;
+rdfs:seeAlso <https://rdamsc.bath.ac.uk/msc/m12> .
 
+# Define Input Datasets
 <https://catalogue.ceh.ac.uk/documents/GEBCOBathymetry.ttl> a ssn:Input, dcat:Dataset.
 <https://catalogue.ceh.ac.uk/documents/EMODNetBathymetryData.ttl> a ssn:Input, dcat:Dataset.
 <https://catalogue.ceh.ac.uk/documents/seaBedPhotos.ttl> a ssn:Input, dcat:Dataset.
 <https://catalogue.ceh.ac.uk/documents/processedMultiBeam.ttl> a ssn:Input, dcat:Dataset.
 
+# Define the STAC Catalog
 <https://radiantearth.github.io/stac-browser/#/external/pilot-imfe-o.s3-ext.jc.rl.ac.uk/haig-fras/STAC_Catalog/catalog.json> a ssn:System, dcat:Service.
